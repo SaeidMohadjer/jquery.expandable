@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="../externals/jquery.easing.1.3.js"></script>
+		<script src="../jquery.expandable.js"></script>
+		<title>Expandable/Collapsable sections (aka show/hide or more/less)</title>
+		<style>
+			/* No CSS rules are required for this plugin to work */
+			
+			.expandable {
+				border: solid 1px #ccc;
+				padding: 10px;				
+			}					
+			.expandable .expandable_content > p {
+				margin: 0;
+			}	
+			.expandable_btn {
+				background: url(images/plus.png) no-repeat left center;
+				padding: 4px 0 4px 20px;
+				color: #006699;
+				border: none;
+				cursor: pointer;
+			}	
+			.expanded > .expandable_btn {
+				background: url(images/minus.png) no-repeat left center;
+			}
+			
+			body {
+				padding-right: 50%;
+			}
+		</style>
+		<script type="text/javascript">
+			$(document).ready(function() {				
+				$('.expandable').expandable({
+					easing: 'easeOutQuart',
+					time: 750,
+					onAnimationStart: function(obj) {},
+					onAnimationEnd: function(obj) {}
+				});
+			});	
+		</script>
+	</head>
+	<body>	 	
+		<h1>Expandable sections</h1>		
+		<div class="expandable expanded" data-button-label="Hide Content">
+			<button class="expandable_btn">Show Content</button>
+			<div class="expandable_content">					
+				<p>This content is visible because div.expandable has also an "expanded" class. Antiochi suae ad per te in lucem, mirantur deo apprehendit Apollonius non dum veniens. Theophile esse deprecor cum suam ut casus, aderit omnia bono in fuerat eum.</p>
+				<br />					
+				<div class="expandable">
+					<button class="expandable_btn">Expandables can be nested!</button>
+					<div class="expandable_content">					
+						<p>Lorem ipsum dolor sit amet, antiochi suae ad per te in lucem, mirantur deo apprehendit Apollonius non dum veniens. Theophile esse deprecor cum suam ut casus, aderit omnia bono in fuerat eum. Lorem ipsum dolor sit amet, athenagoram rigorem nisl cum! Cui Tharsia Theophilo litore iunctionem quae ait Cumque autem nobiscum ei primum intus puella eius est Apollonius eius.</p>
+					</div>
+				</div>
+			</div>
+		</div>			
+	</body>
+</html>
