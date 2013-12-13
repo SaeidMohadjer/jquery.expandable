@@ -13,10 +13,9 @@ jQuery plugin for expanding and collapsing HTML elements
 </ul>
 
 <h2>API</h2>
-<table class="api">
-	<tr><th>options</th><th>default value [optional values]</th><th>description</th></tr>
-	<tr><td>easing</td><td>linear ['easeOutQuart', 'easeOutQuad', 'easeOutCubic', 'easeOutQuint', 'easeOutElastic',...]</td><td>Custom easing requires use of jquery.easing.1.3.js</td></tr>
-	<tr><td>time</td><td>500 [any value]</td><td>time in miliseconds that it takes for sliding to end</td></tr>
-	<tr><td>onAnimationStart</td><td></td><td>Callback function</td></tr>
-	<tr><td>onAnimationEnd</td><td></td><td>Callback function</td></tr>
-</table>
+<ul>
+	<li>easing: linear ['easeOutQuart', 'easeOutQuad', 'easeOutCubic', 'easeOutQuint', 'easeOutElastic',...] (custom easing requires use of jquery.easing.1.3.js)</li>
+	<li>time: 500 [any value] (time in miliseconds that it takes for sliding to end)</li>
+	<li>onAnimationStart: function() {} </li>
+	<li>onAnimationEnd: function() {} </li>
+</ul>

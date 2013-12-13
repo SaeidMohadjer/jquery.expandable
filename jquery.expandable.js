@@ -11,54 +11,60 @@
 		defaults = {
 			time: 500,
 			easing: 'linear',
-			onAnimationStart: function() {},		
+			onAnimationStart: function() {},
 			onAnimationEnd: function() {}		
 		};
 
 	// The actual plugin constructor
 	function Plugin(element, options) {
-		this.element = element;
+		this.$element = $(element);
 		this.options = $.extend({}, defaults, options) ;
 		this._defaults = defaults;
 		this._name = pluginName;
+		
+		this.button = $(element).find('.expandable_btn').eq(0);
+		this.$content = $(element).find('.expandable_content').eq(0);			
+		this.collapsedLabel = this.button.text();
+		this.expandedLabel = $(element).data('button-label');
 		this.init();
 	}		
 	
 	Plugin.prototype = {
 		init: function () {
 			var pluginInstance = this;
-			var $this = $(this.element);
-			var options = this.options;
-			var _btn = $this.find('.expandable_btn').eq(0);
-			var _label = _btn.text();
-			var _altLabel = null;
+			var $wrapper = this.$element;
 			
-			//hide content 
-			$this.not('.expanded').find('.expandable_content').eq(0).hide();
-			
-			//update btn text if alternative text is provided and item is by default expanded
-			if ($this.data('button-label')) {
-				_altLabel = $this.data('button-label');
-				if ($this.hasClass('expanded')) {
-					_btn.text(_altLabel);
-				}			
+			if ($wrapper.hasClass('expanded')) {
+				pluginInstance.updateButtonLabel();
+			} else {
+				pluginInstance.$content.hide();
 			}
 			
-			_btn.click(function(ev) {
-				ev.preventDefault();
-				ev.stopPropagation();
-				
-				$this.find('.expandable_content').eq(0).stop(true, true).slideToggle(options.time, options.easing, function() {
-					options.onAnimationEnd($this);					
-				});
-				options.onAnimationStart($this);
-				
-				$this.toggleClass('expanded');
-				
-				if (_altLabel) {
-					_btn.text($this.hasClass('expanded') ? _altLabel : _label);			
-				}				
+			$wrapper.on('click.expandable', pluginInstance.button, function(event) {
+				pluginInstance.clickHandler(event);			
 			});
+		},
+		clickHandler: function(event) {
+			var pluginInstance = this;
+			var $wrapper = this.$element;		
+			var options = this.options;
+			
+			event.preventDefault();
+			event.stopPropagation();
+			pluginInstance.$content.stop(true, true).slideToggle(options.time, options.easing, function() {
+				options.onAnimationEnd($wrapper);					
+			});
+			options.onAnimationStart($wrapper);
+			$wrapper.toggleClass('expanded');
+			pluginInstance.updateButtonLabel();			
+		},
+		updateButtonLabel: function() {
+			var pluginInstance = this;
+			var $wrapper = this.$element;
+
+			if (pluginInstance.expandedLabel) {
+				pluginInstance.button.text($wrapper.hasClass('expanded') ? pluginInstance.expandedLabel : pluginInstance.collapsedLabel);			
+			}			
 		}
 	};
 
