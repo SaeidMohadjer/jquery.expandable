@@ -40,7 +40,7 @@
 				pluginInstance.$content.hide();
 			}
 			
-			$wrapper.on('click.expandable', pluginInstance.button, function(event) {
+			pluginInstance.button.on('click.expandable', function(event) {
 				pluginInstance.clickHandler(event);			
 			});
 		},
