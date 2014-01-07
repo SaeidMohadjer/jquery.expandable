@@ -1,6 +1,8 @@
 jquery.expandable
 =====================
 
+http://saeidmohadjer.github.io/jquery.expandable/
+
 jQuery plugin for expanding and collapsing HTML elements
 
 <h2>Features</h2>
