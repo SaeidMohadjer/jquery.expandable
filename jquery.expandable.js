@@ -11,6 +11,7 @@
 		defaults = {
 			time: 500,
 			easing: 'linear',
+			accordion: false,
 			onAnimationStart: function() {},
 			onAnimationEnd: function() {}		
 		};
@@ -51,9 +52,20 @@
 			
 			event.preventDefault();
 			event.stopPropagation();
+			
+			if (options.accordion) {
+				$wrapper.siblings().each(function() {
+					if ($(this).hasClass('expanded')) {
+						$(this).removeClass('expanded');
+						$(this).find('.expandable_content').slideUp(options.time, options.easing);
+					}
+				});			
+			}
+			
 			pluginInstance.$content.stop(true, true).slideToggle(options.time, options.easing, function() {
 				options.onAnimationEnd($wrapper);					
 			});
+			
 			options.onAnimationStart($wrapper);
 			$wrapper.toggleClass('expanded');
 			pluginInstance.updateButtonLabel();			

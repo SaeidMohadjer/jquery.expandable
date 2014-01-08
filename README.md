@@ -18,6 +18,7 @@ jQuery plugin for expanding and collapsing HTML elements
 <ul>
 	<li>easing: linear ['easeOutQuart', 'easeOutQuad', 'easeOutCubic', 'easeOutQuint', 'easeOutElastic',...] (custom easing requires use of jquery.easing.1.3.js)</li>
 	<li>time: 500 [any value] (time in miliseconds that it takes for sliding to end)</li>
+	<li>accordion: false [true] (when true sibling expanded items will collapse to make sure no more than one item is expanded at a time)</li>
 	<li>onAnimationStart: function() {} </li>
 	<li>onAnimationEnd: function() {} </li>
 </ul>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="../externals/jquery.easing.1.3.js"></script>
+		<script src="../jquery.expandable.js"></script>
+		<title>Basic example of using jquery.expandable plugin</title>
+		<script type="text/javascript">
+			$(document).ready(function() {				
+				$('.expandable').expandable({
+					accordion: true,
+					easing: 'easeOutCubic'
+				});
+			});	
+		</script>
+		<style rel="stylesheet">
+			h1, h2, p, ul {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul {
+				max-width: 500px;
+				margin-top: 20px;
+			}
+			
+			li {
+				border-bottom: solid 1px #666;
+				padding: 5px 0;
+				list-style: none;
+			}
+			
+			li a {
+				text-decoration: none;
+				color: #000;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>	 	
+		<h1>Accordion example of using jquery.expandable plugin</h1>
+		<h2>Expanding an item collapses other expanded items via use of option "accordion: true"</h2>
+		<ul>
+			<li class="expandable">
+				<a class="expandable_btn" href="#">Clicking this line will show/hide content...</a>
+				<div class="expandable_content">					
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, delectus, consectetur porro iusto impedit deleniti facere nisi praesentium numquam error. Obcaecati, placeat eaque atque omnis id delectus autem! Aspernatur, labore.  Antiochi suae ad per te in lucem, mirantur deo apprehendit Apollonius non dum veniens. Theophile esse deprecor cum suam ut casus, aderit omnia bono in fuerat eum.</p>
+				</div>
+			</li>
+			<li class="expandable expanded">
+				<a class="expandable_btn" href="#">Clicking this line will show/hide content...</a>
+				<div class="expandable_content">					
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, delectus, consectetur porro iusto impedit deleniti facere nisi praesentium numquam error. Obcaecati, placeat eaque atque omnis id delectus autem! Aspernatur, labore.  Antiochi suae ad per te in lucem, mirantur deo apprehendit Apollonius non dum veniens. Theophile esse deprecor cum suam ut casus, aderit omnia bono in fuerat eum.</p>
+				</div>
+			</li>
+			<li class="expandable">
+				<a class="expandable_btn" href="#">Clicking this line will show/hide content...</a>
+				<div class="expandable_content">					
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, delectus, consectetur porro iusto impedit deleniti facere nisi praesentium numquam error. Obcaecati, placeat eaque atque omnis id delectus autem! Aspernatur, labore.  Antiochi suae ad per te in lucem, mirantur deo apprehendit Apollonius non dum veniens. Theophile esse deprecor cum suam ut casus, aderit omnia bono in fuerat eum.</p>
+				</div>
+			</li>
+			<li class="expandable">
+				<a class="expandable_btn" href="#">Clicking this line will show/hide content...</a>
+				<div class="expandable_content">					
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, delectus, consectetur porro iusto impedit deleniti facere nisi praesentium numquam error. Obcaecati, placeat eaque atque omnis id delectus autem! Aspernatur, labore.  Antiochi suae ad per te in lucem, mirantur deo apprehendit Apollonius non dum veniens. Theophile esse deprecor cum suam ut casus, aderit omnia bono in fuerat eum.</p>
+				</div>
+			</li>
+			<li class="expandable">
+				<a class="expandable_btn" href="#">Clicking this line will show/hide content...</a>
+				<div class="expandable_content">					
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, delectus, consectetur porro iusto impedit deleniti facere nisi praesentium numquam error. Obcaecati, placeat eaque atque omnis id delectus autem! Aspernatur, labore.  Antiochi suae ad per te in lucem, mirantur deo apprehendit Apollonius non dum veniens. Theophile esse deprecor cum suam ut casus, aderit omnia bono in fuerat eum.</p>
+				</div>
+			</li>			
+		</ul>
+	</body>
+</html>
