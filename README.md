@@ -1,7 +1,7 @@
 jquery.expandable
 =====================
 
-http://saeidmohadjer.github.io/jquery.expandable/
+Demo: http://repos.saeidmohadjer.com/jquery.expandable/demo/accordion.html
 
 jQuery plugin for expanding and collapsing HTML elements
 

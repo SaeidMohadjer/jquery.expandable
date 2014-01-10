@@ -9,7 +9,7 @@
 		<title>Basic example of using jquery.expandable plugin</title>
 		<script type="text/javascript">
 			$(document).ready(function() {				
-				$('.expandable').expandable({
+				$('#demo1 .expandable').expandable({
 					accordion: true,
 					easing: 'easeOutCubic'
 				});
@@ -21,58 +21,59 @@
 				padding: 0;
 			}
 			
-			ul {
-				max-width: 500px;
+			h2 {
+				font-size: 18px;
+				margin-bottom: 5px;
+			}
+			
+			section {
+				max-width: 400px;
 				margin-top: 20px;
 			}
 			
 			li {
-				border-bottom: solid 1px #666;
-				padding: 5px 0;
+				padding: 5px 10px;
 				list-style: none;
+				background: #eee;
+				margin-bottom: 5px;
 			}
 			
 			li a {
 				text-decoration: none;
 				color: #000;
-				font-weight: bold;
 			}
 		</style>
 	</head>
 	<body>	 	
-		<h1>Accordion example of using jquery.expandable plugin</h1>
-		<h2>Expanding an item collapses other expanded items via use of option "accordion: true"</h2>
-		<ul>
-			<li class="expandable">
-				<a class="expandable_btn" href="#">Clicking this line will show/hide content...</a>
-				<div class="expandable_content">					
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, delectus, consectetur porro iusto impedit deleniti facere nisi praesentium numquam error. Obcaecati, placeat eaque atque omnis id delectus autem! Aspernatur, labore.  Antiochi suae ad per te in lucem, mirantur deo apprehendit Apollonius non dum veniens. Theophile esse deprecor cum suam ut casus, aderit omnia bono in fuerat eum.</p>
-				</div>
-			</li>
-			<li class="expandable expanded">
-				<a class="expandable_btn" href="#">Clicking this line will show/hide content...</a>
-				<div class="expandable_content">					
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, delectus, consectetur porro iusto impedit deleniti facere nisi praesentium numquam error. Obcaecati, placeat eaque atque omnis id delectus autem! Aspernatur, labore.  Antiochi suae ad per te in lucem, mirantur deo apprehendit Apollonius non dum veniens. Theophile esse deprecor cum suam ut casus, aderit omnia bono in fuerat eum.</p>
-				</div>
-			</li>
-			<li class="expandable">
-				<a class="expandable_btn" href="#">Clicking this line will show/hide content...</a>
-				<div class="expandable_content">					
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, delectus, consectetur porro iusto impedit deleniti facere nisi praesentium numquam error. Obcaecati, placeat eaque atque omnis id delectus autem! Aspernatur, labore.  Antiochi suae ad per te in lucem, mirantur deo apprehendit Apollonius non dum veniens. Theophile esse deprecor cum suam ut casus, aderit omnia bono in fuerat eum.</p>
-				</div>
-			</li>
-			<li class="expandable">
-				<a class="expandable_btn" href="#">Clicking this line will show/hide content...</a>
-				<div class="expandable_content">					
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, delectus, consectetur porro iusto impedit deleniti facere nisi praesentium numquam error. Obcaecati, placeat eaque atque omnis id delectus autem! Aspernatur, labore.  Antiochi suae ad per te in lucem, mirantur deo apprehendit Apollonius non dum veniens. Theophile esse deprecor cum suam ut casus, aderit omnia bono in fuerat eum.</p>
-				</div>
-			</li>
-			<li class="expandable">
-				<a class="expandable_btn" href="#">Clicking this line will show/hide content...</a>
-				<div class="expandable_content">					
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, delectus, consectetur porro iusto impedit deleniti facere nisi praesentium numquam error. Obcaecati, placeat eaque atque omnis id delectus autem! Aspernatur, labore.  Antiochi suae ad per te in lucem, mirantur deo apprehendit Apollonius non dum veniens. Theophile esse deprecor cum suam ut casus, aderit omnia bono in fuerat eum.</p>
-				</div>
-			</li>			
-		</ul>
+		<h1>jQuery.expandable</h1>
+		<section id="demo1">
+			<h2>Demo 1: Expanding an item collapses other items (accordion: true)</h2>		
+			<ul>
+				<li class="expandable">
+					<a class="expandable_btn" href="#">Clicking this line will show/hide content...</a>
+					<div class="expandable_content">					
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, delectus, consectetur porro iusto impedit deleniti facere nisi praesentium numquam error. Obcaecati, placeat eaque atque omnis id delectus autem! Aspernatur, labore.  Antiochi suae ad per te in lucem, mirantur deo apprehendit Apollonius non dum veniens. Theophile esse deprecor cum suam ut casus, aderit omnia bono in fuerat eum.</p>
+					</div>
+				</li>
+				<li class="expandable expanded">
+					<a class="expandable_btn" href="#">Clicking this line will show/hide content...</a>
+					<div class="expandable_content">					
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, delectus, consectetur porro iusto impedit deleniti facere nisi praesentium numquam error. Obcaecati, placeat eaque atque omnis id delectus autem! Aspernatur, labore.  Antiochi suae ad per te in lucem, mirantur deo apprehendit Apollonius non dum veniens. Theophile esse deprecor cum suam ut casus, aderit omnia bono in fuerat eum.</p>
+					</div>
+				</li>
+				<li class="expandable">
+					<a class="expandable_btn" href="#">Clicking this line will show/hide content...</a>
+					<div class="expandable_content">					
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, delectus, consectetur porro iusto impedit deleniti facere nisi praesentium numquam error. Obcaecati, placeat eaque atque omnis id delectus autem! Aspernatur, labore.  Antiochi suae ad per te in lucem, mirantur deo apprehendit Apollonius non dum veniens. Theophile esse deprecor cum suam ut casus, aderit omnia bono in fuerat eum.</p>
+					</div>
+				</li>
+				<li class="expandable">
+					<a class="expandable_btn" href="#">Clicking this line will show/hide content...</a>
+					<div class="expandable_content">					
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, delectus, consectetur porro iusto impedit deleniti facere nisi praesentium numquam error. Obcaecati, placeat eaque atque omnis id delectus autem! Aspernatur, labore.  Antiochi suae ad per te in lucem, mirantur deo apprehendit Apollonius non dum veniens. Theophile esse deprecor cum suam ut casus, aderit omnia bono in fuerat eum.</p>
+					</div>
+				</li>			
+			</ul>
+		</section>
 	</body>
 </html>
