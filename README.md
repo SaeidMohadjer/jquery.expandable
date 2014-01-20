@@ -1,11 +1,16 @@
 jquery.expandable
 =====================
 
-Demo: http://repos.saeidmohadjer.com/jquery.expandable/demo/accordion.html
-
 jQuery plugin for expanding and collapsing HTML elements
 
-<h2>Features</h2>
+<h3>Examples</h3>
+<ul>
+	<li><a href="http://repos.saeidmohadjer.com/jquery.expandable/demo/basic.html">Basic</a></li>
+	<li><a href="http://repos.saeidmohadjer.com/jquery.expandable/demo/nested.html">Nested sections</a></li>
+	<li><a href="http://repos.saeidmohadjer.com/jquery.expandable/demo/accordion.html">Accordion</a></li>	
+</ul>
+
+<h3>Features</h3>
 <ul>
 	<li>Supports nesting of expandable elements</li>
 	<li>Allows alternative label for button when expanded (via HTML data attribute)</li>
@@ -14,11 +19,11 @@ jQuery plugin for expanding and collapsing HTML elements
 	<li>Requires no CSS</li>
 </ul>
 
-<h2>API</h2>
+<h3>API</h3>
 <ul>
-	<li>easing: linear ['easeOutQuart', 'easeOutQuad', 'easeOutCubic', 'easeOutQuint', 'easeOutElastic',...] (custom easing requires use of jquery.easing.1.3.js)</li>
-	<li>time: 500 [any value] (time in miliseconds that it takes for sliding to end)</li>
-	<li>accordion: false [true] (when true sibling expanded items will collapse to make sure no more than one item is expanded at a time)</li>
-	<li>onAnimationStart: function() {} </li>
-	<li>onAnimationEnd: function() {} </li>
+	<li><strong>easing</strong>: linear ['easeOutQuart', 'easeOutQuad', 'easeOutCubic', 'easeOutQuint', 'easeOutElastic',...] (custom easing requires use of jquery.easing.1.3.js)</li>
+	<li><strong>time</strong>: 500 [any value] (time in miliseconds that it takes for sliding to end)</li>
+	<li><strong>accordion</strong>: false [true] (when true sibling expanded items will collapse to make sure no more than one item is expanded at a time)</li>
+	<li><strong>onAnimationStart</strong>: function() {} </li>
+	<li><strong>onAnimationEnd</strong>: function() {} </li>
 </ul>
