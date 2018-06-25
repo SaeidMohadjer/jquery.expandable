@@ -5,9 +5,9 @@ jQuery plugin for expanding and collapsing HTML elements
 
 <h3>Examples</h3>
 <ul>
-	<li><a href="https://smohadjer.github.io/jquery.expandable/demo/basic.html">Basic</a></li>
-	<li><a href="https://smohadjer.github.io/jquery.expandable/demo/nested.html">Nested sections</a></li>
-	<li><a href="https://smohadjer.github.io/jquery.expandable/demo/accordion.html">Accordion</a></li>	
+	<li><a href="http://smohadjer.github.io/jquery.expandable/demo/basic.html">Basic</a></li>
+	<li><a href="http://smohadjer.github.io/jquery.expandable/demo/nested.html">Nested sections</a></li>
+	<li><a href="http://smohadjer.github.io/jquery.expandable/demo/accordion.html">Accordion</a></li>	
 </ul>
 
 <h3>Features</h3>
